@@ -11,9 +11,10 @@ public enum HodlerPluginError: Error {
 public class HodlerPlugin {
 
     public enum LockTimeInterval: UInt16, CaseIterable, Codable {
-        case hour = 7           //  60 * 60 / 512
         case month = 5063       //  30 * 24 * 60 * 60 / 512
+        case month_3 = 15189
         case halfYear = 30881   // 183 * 24 * 60 * 60 / 512
+        case month_9 = 41070
         case year = 61593       // 365 * 24 * 60 * 60 / 512
 
         private static let sequenceTimeSecondsGranularity = 512
