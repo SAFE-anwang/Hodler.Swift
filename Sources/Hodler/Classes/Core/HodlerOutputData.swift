@@ -39,7 +39,7 @@ public class HodlerOutputData: IPluginOutputData {
 }
 
 public class HodlerData: IPluginData {
-    let lockTimeInterval: HodlerPlugin.LockTimeInterval
+    public let lockTimeInterval: HodlerPlugin.LockTimeInterval
 
     public init(lockTimeInterval: HodlerPlugin.LockTimeInterval) {
         self.lockTimeInterval = lockTimeInterval
