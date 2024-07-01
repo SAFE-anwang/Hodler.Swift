@@ -15,6 +15,9 @@ public class HodlerPlugin {
         case halfYear = 30881   // 183 * 24 * 60 * 60 / 512
         case month_9 = 41070
         case year = 61593       // 365 * 24 * 60 * 60 / 512
+        case year_3 = 184779    // 3 * 365 * 24 * 60 * 60 / 512
+        case year_5 = 307965    // 5 * 365 * 24 * 60 * 60 / 512
+        case year_10 = 615930   // 10 * 365 * 24 * 60 * 60 / 512
 
         private static let sequenceTimeSecondsGranularity = 512
         private static let relativeLockTimeLockMask: UInt32 = 0x400000 // (1 << 22)
