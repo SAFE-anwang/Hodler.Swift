@@ -19,7 +19,7 @@ public class HodlerOutputData: IPluginOutputData {
         let lockTimeIntervalStr = String(parts[0])
         let addressString = String(parts[1])
 
-        guard let int16 = UInt16(lockTimeIntervalStr), let lockTimeInterval = HodlerPlugin.LockTimeInterval(rawValue: int16) else {
+        guard let int32 = UInt32(lockTimeIntervalStr), let lockTimeInterval = HodlerPlugin.LockTimeInterval(rawValue: int32) else {
             throw HodlerPluginError.invalidData
         }
 

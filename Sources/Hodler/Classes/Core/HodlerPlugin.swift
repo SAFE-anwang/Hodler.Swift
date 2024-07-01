@@ -9,7 +9,7 @@ public enum HodlerPluginError: Error {
 }
 
 public class HodlerPlugin {
-    public enum LockTimeInterval: UInt16, CaseIterable, Codable {
+    public enum LockTimeInterval: UInt32, CaseIterable, Codable {
         case month = 5063       //  30 * 24 * 60 * 60 / 512
         case month_3 = 15189
         case halfYear = 30881   // 183 * 24 * 60 * 60 / 512
@@ -58,7 +58,7 @@ public class HodlerPlugin {
             return nil
         }
 
-        let int16 = lockTimeIntervalData.withUnsafeBytes { $0.baseAddress!.assumingMemoryBound(to: UInt16.self).pointee }
+        let int16 = lockTimeIntervalData.withUnsafeBytes { $0.baseAddress!.assumingMemoryBound(to: UInt32.self).pointee }
         return LockTimeInterval(rawValue: int16)
     }
 
