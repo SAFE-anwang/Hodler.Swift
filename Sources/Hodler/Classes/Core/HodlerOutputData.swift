@@ -23,7 +23,6 @@ public class HodlerOutputData: IPluginOutputData {
             throw HodlerPluginError.invalidData
         }
 
-
         return HodlerOutputData(lockTimeInterval: lockTimeInterval, addressString: addressString)
     }
 
@@ -35,7 +34,6 @@ public class HodlerOutputData: IPluginOutputData {
     func toString() -> String {
         "\(lockTimeInterval.rawValue)|\(addressString)"
     }
-
 }
 
 public class HodlerData: IPluginData {
